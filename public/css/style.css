@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+}
+.btn{
+    color:white;
+}
+.btn:hover{
+    color:whitesmoke;
+}
