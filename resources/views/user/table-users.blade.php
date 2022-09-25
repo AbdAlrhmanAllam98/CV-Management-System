@@ -39,3 +39,6 @@
         </tbody>
     </table>
 </div>
+<div class="pagination">
+    {{$users->render("pagination::default")}}
+</div>

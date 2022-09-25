@@ -7,3 +7,17 @@ a{
 .btn:hover{
     color:whitesmoke;
 }
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a{
+    margin:0 15px;
+    font-size: 1.2rem;
+}
+.pagination span{
+    margin:0 15px;
+    font-size: 1.2rem;
+    color: red;
+}

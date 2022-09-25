@@ -28,6 +28,6 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     public function cvs(){
-        return $this->hasMany(CV::class,'userEmail','email');
+        return $this->hasMany(CV::class,'userEmail','email')->with('sections');
     }
 }

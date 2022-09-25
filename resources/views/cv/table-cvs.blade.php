@@ -39,3 +39,8 @@
         </tbody>
     </table>
 </div>
+@if(request()->route()->uri()==='cvs')
+<div class="pagination">
+    {{$cvs->render("pagination::default")}}
+</div>
+@endif

@@ -18,6 +18,6 @@ class CV extends Model
     }
 
     public function sections(){
-        return $this->hasMany(Section::class,'cvId','id');
+        return $this->hasMany(Section::class,'cvId','id')->with('cv');
     }
 }

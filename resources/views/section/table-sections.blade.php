@@ -1,7 +1,6 @@
 <div class="add-section d-flex justify-content-around my-3">
     <h2>{{request()->route()->uri()=='sections'?"All Sections":"CV ($cv->cvName) Sections"}}</h2>
     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addModal">
-        
         {{request()->route()->uri()=='sections'?"Add Section":"Add Section for ($cv->cvName)"}}
     </button>
 </div>
@@ -42,3 +41,8 @@
         </tbody>
     </table>
 </div>
+@if(request()->route()->uri()==='sections')
+<div class="pagination">
+    {{$sections->render("pagination::default")}}
+</div>
+@endif

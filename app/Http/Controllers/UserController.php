@@ -9,7 +9,7 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function index(){
-        $users=User::get();
+        $users=User::with('cvs')->orderBy('created_at')->paginate(10);
         return view('user.users',compact('users'));
     }
     public function createUser(CreateUserRequest $request){
@@ -32,6 +32,9 @@ class UserController extends Controller
     public function deleteUser(User $user){
         if($user->delete()){
             return response()->json(['message'=>'User Deleted Successfully']);
+        }
+        else{
+            return response()->json(['message'=>'User Not Deleted']);
         }
     }
 }

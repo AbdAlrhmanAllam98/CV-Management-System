@@ -68,6 +68,7 @@ $('#edit-cv').on('submit',function(e){
             error:function(reject){
                 toastr.error("CV isn`t Updated !! ");
                 response=JSON.parse(reject.responseText);
+                console.log(reject.responseText);
                 $.each(response.errors,function(key,value){
                     $(`#${key}-error-edit`).text(value[0]);
                 });
